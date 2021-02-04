@@ -1,0 +1,75 @@
+public class copyrok {
+    public static final int SIZE=3;
+    public static void main(String[] args){
+        boost();
+        line();
+        midtop();
+        midbot();
+        line();
+        midbot();
+        midtop();
+        line();
+        boost();
+    }
+    public static void boost(){
+        for(int line=1; line<=5;line++){
+            for (int spaces=1; spaces<= -1*line+SIZE*2; spaces++){
+                System.out.print(" ");
+            }
+            for (int slash=1; slash<=line;slash++){
+                System.out.print("/");
+            }
+            System.out.print("**");
+            for(int bak=1; bak<=line; bak++){
+                System.out.print("\\");
+            }
+            System.out.println();
+        }
+    }
+    public static void line(){
+        System.out.print("+");
+        for(int slash=1;slash<=SIZE*2;slash++){
+            System.out.print("=*");
+        }
+        System.out.println("+");
+    }
+    public static void midtop(){
+        for( int line=1; line<=SIZE; line++){
+            System.out.print("|");
+            patterntop(line);
+            patterntop(line);
+            System.out.println("|");
+        }
+    }
+    public static void patterntop(int line){
+        for(int dots=1; dots<=-1*line+SIZE; dots++){
+            System.out.print(".");
+        }
+        for(int slash=1; slash<=line; slash++){
+            System.out.print("/\\");
+        }
+        for(int dots=1; dots<= -1*line+SIZE; dots++){
+            System.out.print(".");
+        }
+    }
+    public static void midbot(){
+        for(int line=1;line<=SIZE;line++){
+            System.out.print("|");
+            patternbottom(line);
+            patternbottom(line);
+            System.out.println("|");
+        }        
+    }
+    public static void patternbottom(int line){
+        for (int dot=0; dot<line-1; dot++){
+            System.out.print(".");
+        }
+        for(int tslash=1; tslash<=-1*line+SIZE+1; tslash++){
+            System.out.print("\\/");
+        }
+        for(int dot=0; dot<line-1; dot++){
+            System.out.print(".");
+        }
+    }
+ 
+}
