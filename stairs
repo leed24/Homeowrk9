@@ -1,0 +1,43 @@
+public class stairs {
+    public static final int stairnum =5;
+    public static void main(String[] args){
+        for(int stairs=1;stairs<=stairnum; stairs++){
+            person(stairs);
+        }
+        for(int end=1;end<=5*stairnum;end++){
+            System.out.print("*");
+        }
+        System.out.print("*******");
+    }
+    
+    public static void top(int stairs){
+        System.out.print("******");
+        for(int spaces=1; spaces<=5*stairs-5; spaces++){
+            System.out.print(" ");
+        }
+        System.out.println("*");
+    }
+    public static void right(int stairs){
+        System.out.print("*");
+        for (int end=0; end<5*stairs; end++){
+            System.out.print(" ");
+        }
+        System.out.println("*");
+    }
+    public static void left(int stairs){
+        for(int space=1; space<=(5*stairnum-5)-(5*stairs-5); space++){
+            System.out.print(" ");
+        }
+    }
+    public static void person(int stairs){
+        left(stairs);
+        System.out.print("  o  ");
+        top(stairs);
+        left(stairs);
+        System.out.print(" /|\\ ");
+        right(stairs);
+        left(stairs);
+        System.out.print(" / \\ ");
+        right(stairs);
+    }
+}
