@@ -1,0 +1,60 @@
+public class protre {
+    public static final int SIZE = 8;
+    public static void main(String[] args){
+        dashes();
+        top();
+        bot();
+        dashes();
+        bot();
+        top();
+        dashes();
+    }
+    public static void dashes(){
+        System.out.print("+");
+        for(int dash=1; dash<= SIZE+1; dash ++){
+            System.out.print("-");
+        }
+        System.out.println("+");
+    }
+    public static void top(){
+        for(int line=1; line<=SIZE/2; line++){
+            System.out.print("|");
+            spacestop(line);
+            for (int slash=1; slash<= line-1; slash++){
+                System.out.print("/");
+            }
+            System.out.print("*");
+            for (int bak=1; bak<=line-1; bak ++){
+                System.out.print("\\");
+            }
+            spacestop(line);
+            System.out.println("|");
+        }
+    }
+    public static void spacestop(int line){
+        for (int spaces=1; spaces <=-line+5; spaces ++){
+            System.out.print(" ");
+        }
+    }
+    public static void bot(){
+        for(int str=1; str<=SIZE/2; str++){    
+            System.out.print("|");
+            spacesbot(str);
+            for(int bak=1; bak<=-str+4; bak++){
+                System.out.print("\\");
+            }
+            System.out.print("*");
+            for(int slash=1; slash<=-str+4; slash++){
+                System.out.print("/");
+            }
+            spacesbot(str);
+            System.out.println("|");
+        }
+    }
+    public static void spacesbot(int str){
+        for(int spaces=1; spaces<=str;spaces ++){
+            System.out.print(" ");
+        }
+    }
+ 
+}
