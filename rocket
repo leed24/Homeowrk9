@@ -36,12 +36,12 @@ public class copyrok {
     public static void midtop(){
         for( int line=1; line<=SIZE; line++){
             System.out.print("|");
-            patterntop(line);
-            patterntop(line);
+            patop(line);
+            patop(line);
             System.out.println("|");
         }
     }
-    public static void patterntop(int line){
+    public static void patop(int line){
         for(int dots=1; dots<=-1*line+SIZE; dots++){
             System.out.print(".");
         }
@@ -55,12 +55,12 @@ public class copyrok {
     public static void midbot(){
         for(int line=1;line<=SIZE;line++){
             System.out.print("|");
-            patternbottom(line);
-            patternbottom(line);
+            patbot(line);
+            patbot(line);
             System.out.println("|");
         }        
     }
-    public static void patternbottom(int line){
+    public static void patbot(int line){
         for (int dot=0; dot<line-1; dot++){
             System.out.print(".");
         }
